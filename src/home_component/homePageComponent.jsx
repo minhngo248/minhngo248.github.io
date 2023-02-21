@@ -18,6 +18,7 @@ class HomePageComponent extends Component {
         return (
             <>
                 <NavComponent />
+                <div id='main'>
                 <div className="row">
                     <div id="column1">
                         <h1>Welcome to Minh NGO's website</h1>
@@ -29,8 +30,8 @@ class HomePageComponent extends Component {
                 </div>
 
                 <h2>Personal Information</h2>
-                Currently a fourth year student of the Department of Computer Science, Institut National des Sciences Appliquées de Lyon (<a href="https://www.insa-lyon.fr">INSA de Lyon</a>). 
-                Passionate about new technologies, especially in the field of Computer Science, I want to move towards CS training to become a Data Analyst.
+                <p>Currently a fourth year student of the Department of Computer Science, Institut National des Sciences Appliquées de Lyon (<a href="https://www.insa-lyon.fr">INSA de Lyon</a>). 
+                Passionate about new technologies, especially in the field of Computer Science, I want to move towards CS training to become a Data Analyst.</p>
 
                 <h2>Curriculum Vitae</h2>
                 <ul>
@@ -45,6 +46,7 @@ class HomePageComponent extends Component {
                     <li>June 2022 - Sept 2022: data analysis internship at the Astrophysical Research Centre of Lyon</li>
                     <li>June 2020 - Oct 2020: private tutor in Maths and Physics for a high-school student who struggled with working from home.</li>
                 </ul>
+                </div>
             </>
         );
     }

@@ -29,7 +29,7 @@
     <xsl:template match="subject">
         <li>
             <a>
-            <xsl:attribute name="href"><xsl:value-of select="./@src"/></xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="./@src"/></xsl:attribute> <xsl:attribute name="download" />
             <xsl:value-of select="."/></a>
         </li>
     </xsl:template>

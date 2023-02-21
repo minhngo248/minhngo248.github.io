@@ -15,6 +15,9 @@ class ProjectPageComponent extends Component {
         return (
             <>
                 <NavComponent />
+                <div id='main'>
+                    
+                </div>
             </>
         );
     }
