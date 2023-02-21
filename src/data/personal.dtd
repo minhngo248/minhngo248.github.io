@@ -1,0 +1,33 @@
+
+
+<!ELEMENT personal (info, education, projects)>
+
+<!ELEMENT info (img)>
+
+<!ELEMENT img (#PCDATA)>
+
+<!ATTLIST img
+    src CDATA #REQUIRED
+>
+
+<!ELEMENT education (3if, 4if)>
+<!ELEMENT 3if (sem1, sem2)>
+<!ELEMENT 4if (sem1, sem2)>
+<!ELEMENT sem1 (module+)>
+<!ELEMENT sem2 (module+)>
+<!ELEMENT module (subject+)>
+<!ATTLIST module
+    name CDATA #REQUIRED
+>
+<!ELEMENT subject (#PCDATA)>
+<!ATTLIST subject
+    src CDATA #REQUIRED
+>
+
+<!ELEMENT projects (time+)>
+<!ELEMENT time (project+)>
+<!ATTLIST time 
+    time CDATA #REQUIRED>
+<!ELEMENT project (#PCDATA)>
+<!ATTLIST project
+    src CDATA #REQUIRED>
