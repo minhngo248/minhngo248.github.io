@@ -14,17 +14,17 @@ function App() {
           {/* This route is for home component 
           with exact path "/", in component props 
           we passes the imported component*/}
-          <Route exact path="/home" component={HomePageComponent} />
+          <Route path="/home" component={HomePageComponent} />
 
           {/* This route is for about component 
           with exact path "/about", in component 
           props we passes the imported component*/}
-          <Route exact path="/education" component={EducationPageComponent} />
+          <Route path="/education" component={EducationPageComponent} />
 
           {/* This route is for about component 
           with exact path "/about", in component 
           props we passes the imported component*/}
-          <Route exact path="/project" component={ProjectPageComponent} />
+          <Route path="/project" component={ProjectPageComponent} />
 
           {/* If any route mismatches the upper 
           route endpoints then, redirect triggers 
