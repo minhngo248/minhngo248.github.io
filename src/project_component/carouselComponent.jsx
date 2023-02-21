@@ -9,21 +9,21 @@ class CarouselComponent extends Component {
       <Carousel>
         <Carousel.Item interval={1000}>
           <img
-            className="d-block w-50 h-50"
+            className="d-block w-100"
             src="/img/agile.png"
             alt="Delivery app"
           />
         </Carousel.Item>
         <Carousel.Item interval={1000}>
           <img
-            className="d-block w-50 h-50"
+            className="d-block w-100"
             src="/img/dbscan.jpg"
             alt="Clustering Lyon"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-50 h-50"
+            className="d-block w-100"
             src="/img/anime.png"
             alt="Main screen of Anime app"
           />

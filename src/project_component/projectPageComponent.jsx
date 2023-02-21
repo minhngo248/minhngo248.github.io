@@ -43,7 +43,11 @@ class ProjectPageComponent extends Component {
 
                 <div id='main'>
                     <h2>Highlighted projects in M.S</h2>
-                    <CarouselComponent />
+                    
+                    <div className="d-block w-75">
+                        <CarouselComponent />
+                    </div>
+
                     <h2>Code sources</h2>
                     <div id="projects">
 
