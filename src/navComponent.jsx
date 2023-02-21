@@ -15,12 +15,12 @@ class NavComponent extends Component {
             <>
                 <Navbar bg="light" variant="light">
                     <Container>
-                        <Navbar.Brand href="/home">Minh Ngo</Navbar.Brand>
+                        <Navbar.Brand href="/">Minh Ngo</Navbar.Brand>
                         <Nav
                             className="me-auto my-2 my-lg-0"
                             style={{ maxHeight: "100px" }}
                         >
-                            <Nav.Link href="/home">Home</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="/education">Education</Nav.Link>
                             <Nav.Link href="/project">Projects</Nav.Link>
                         </Nav>
