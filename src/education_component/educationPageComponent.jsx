@@ -56,9 +56,8 @@ class EducationPageComponent extends Component {
     }
 
     render() {
-        console.log("rendered");
         return (
-            <>
+            <React.Fragment>
                 <NavComponent />
                 <div id='main'>
                     <h2>Program</h2>
@@ -117,7 +116,7 @@ class EducationPageComponent extends Component {
                     </div>
 
                 </div>
-            </>
+            </React.Fragment>
         );
     }
 }

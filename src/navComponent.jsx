@@ -12,9 +12,9 @@ class NavComponent extends Component {
 
     render() {
         return (
-            <>
-                <Navbar bg="light" variant="light">
-                    <Container>
+            <React.Fragment>
+                <Navbar bg="light" expand="lg">
+                    <Container fluid>
                         <Navbar.Brand href="/">Minh Ngo</Navbar.Brand>
                         <Nav
                             className="me-auto my-2 my-lg-0"
@@ -26,7 +26,7 @@ class NavComponent extends Component {
                         </Nav>
                     </Container>
                 </Navbar>
-            </>
+            </React.Fragment>
         );
     }
 }
