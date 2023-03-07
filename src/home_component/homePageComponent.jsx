@@ -25,7 +25,8 @@ class HomePageComponent extends Component {
                         </div>
 
                         <div id="column2">
-                            <img src={Ngoc_Minh} width="100" height="130" alt="Identity photo" />
+                            <img src={Ngoc_Minh} className="rounded-circle"
+                                style={{width: '150px', height: '170px'}} alt="Identity photo" />
                         </div>
                     </div>
 

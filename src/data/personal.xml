@@ -136,6 +136,9 @@
             <subject src="/subjects/4if/second_sem/IF-4-MDF.pdf">Management, Law and Finance</subject>
             <subject src="/subjects/4if/second_sem/HUMA-PPH.pdf">Individual Work in Humanities</subject>
         </module>
+        <module name="Sports">
+            <subject src="/subjects/4if/second_sem/EPS-4-S2.pdf">Tennis</subject>
+        </module>
         <module name="Internship">
             <subject src="/subjects/4if/second_sem/IF-4-STA.pdf">Internship</subject>
         </module>
