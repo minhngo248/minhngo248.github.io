@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import NavComponent from '../navComponent';
 import Ngoc_Minh from '../data/img/Ngoc_Minh.jpg';
-import CV_eng from '../data/files/NGO-Ngoc-Minh_CV_eng.pdf';
+import CV_eng from '../data/files/NGO-Ngoc-Minh_CV_machine_learning.pdf';
 import CV from '../data/files/NGO-Ngoc-Minh_CV.pdf';
+import Linguaskill from '../data/files/Linguaskill_test_report.pdf';
 import './homePage.css';
 
 class HomePageComponent extends Component {
@@ -46,6 +47,12 @@ class HomePageComponent extends Component {
                     <ul>
                         <li>June 2022 - Sept 2022: data analysis internship at the Astrophysical Research Centre of Lyon</li>
                         <li>June 2020 - Oct 2020: private tutor in Maths and Physics for a high-school student who struggled with working from home.</li>
+                    </ul>
+
+                    <h2>Licences and Certifications</h2>
+                    <ul>
+                        <li>March 2023: DeepLearning.AI Supervised Machine Learning: Regression and Classification. Credential ID: 7WA9RNM3WLCP (<a href="https://coursera.org/share/34e892386b5d01e1a24735e0e0648451">here</a>)</li>
+                        <li>January 2023: Linguaskill English Test level C1 (<a href={Linguaskill}>here</a>)</li>
                     </ul>
                 </div>
 
