@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import NavComponent from '../navComponent';
 import Ngoc_Minh from '../data/img/Ngoc_Minh.jpg';
-import CV_eng from '../data/files/NGO-Ngoc-Minh_CV_machine_learning.pdf';
-import CV from '../data/files/NGO-Ngoc-Minh_CV.pdf';
+import CV_fr from '../data/files/NGO-Ngoc-Minh_CV_machine_learning.pdf';
+import CV_eng from '../data/files/NGO-Ngoc-Minh_CV_eng.pdf';
 import Linguaskill from '../data/files/Linguaskill_test_report.pdf';
 import './homePage.css';
 
@@ -39,7 +39,7 @@ class HomePageComponent extends Component {
                     <ul>
                         <li>CV in English <a href={CV_eng}>click here
                         </a></li>
-                        <li>CV in French <a href={CV}>click here
+                        <li>CV in French <a href={CV_fr}>click here
                         </a></li>
                     </ul>
 
