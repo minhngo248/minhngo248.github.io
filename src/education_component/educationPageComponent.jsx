@@ -61,6 +61,32 @@ class EducationPageComponent extends Component {
                 <NavComponent />
                 <div id='main'>
                     <h2>Program</h2>
+
+                    <h3>Fourth year of the Department of Computer Science</h3>
+
+                    <Button variant="info" id="button-4.1"
+                        onClick={() => {
+                            const elemModule = document.getElementById("if4-sem1");
+                            elemModule.style.display = 'block';
+                            elemModule.innerHTML = this.state.dataIf4Sem1;
+                            const elemModule2 = document.getElementById("if4-sem2");
+                            elemModule2.style.display = 'none';
+                        }}>First semester</Button>
+
+                    <Button variant="info" id="button-4.2"
+                        onClick={() => {
+                            const elemModule = document.getElementById("if4-sem2");
+                            elemModule.style.display = 'block';
+                            elemModule.innerHTML = this.state.dataIf4Sem2;
+                            const elemModule2 = document.getElementById("if4-sem1");
+                            elemModule2.style.display = 'none';
+                        }}>Second semester</Button><br />
+
+                    <div id="if4-sem1" style={{ display: 'none' }}>
+                    </div>
+                    <div id="if4-sem2" style={{ display: 'none' }}>
+                    </div>
+
                     <h3>Third year of the Department of Computer Science</h3>
 
                     <Button variant="info" id="button-3.1"
@@ -86,33 +112,6 @@ class EducationPageComponent extends Component {
                     </div>
 
                     <div id="if3-sem2" style={{ display: 'none' }}>
-                    </div>
-
-
-                    <h3>Fourth year of the Department of Computer Science</h3>
-
-                    <Button variant="info" id="button-4.1"
-                        onClick={() => {
-                            const elemModule = document.getElementById("if4-sem1");
-                            elemModule.style.display = 'block';
-                            elemModule.innerHTML = this.state.dataIf4Sem1;
-                            const elemModule2 = document.getElementById("if4-sem2");
-                            elemModule2.style.display = 'none';
-                        }}>First semester</Button>
-
-                    <Button variant="info" id="button-4.2"
-                        onClick={() => {
-                            const elemModule = document.getElementById("if4-sem2");
-                            elemModule.style.display = 'block';
-                            elemModule.innerHTML = this.state.dataIf4Sem2;
-                            const elemModule2 = document.getElementById("if4-sem1");
-                            elemModule2.style.display = 'none';
-                        }}>Second semester</Button><br />
-
-                    <div id="if4-sem1" style={{ display: 'none' }}>
-                    </div>
-
-                    <div id="if4-sem2" style={{ display: 'none' }}>
                     </div>
 
                 </div>

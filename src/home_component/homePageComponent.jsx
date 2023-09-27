@@ -45,13 +45,14 @@ class HomePageComponent extends Component {
 
                     <h2>Professional Experiences</h2>
                     <ul>
+                        <li>May 2023 - Sept 2023: Machine Learning internship at the L.I.R.I.S (Laboratoire d'InfoRmatique en Image et Systèmes d'information)</li>
                         <li>June 2022 - Sept 2022: data analysis internship at the Astrophysical Research Centre of Lyon</li>
-                        <li>June 2020 - Oct 2020: private tutor in Maths and Physics for a high-school student who struggled with working from home.</li>
                     </ul>
 
                     <h2>Licences and Certifications</h2>
                     <ul>
-                        <li>March 2023: DeepLearning.AI Supervised Machine Learning: Regression and Classification. Credential ID: 7WA9RNM3WLCP (<a href="https://coursera.org/share/34e892386b5d01e1a24735e0e0648451">here</a>)</li>
+                        <li>June 2023: IBM Introduction to Containers w/ Docker, Kubernetes & OpenShift (<a href="https://www.coursera.org/account/accomplishments/verify/HXSEWPZPMQE4">here</a>)</li>
+                        <li>March 2023: DeepLearning.AI Machine Learning Specialization (<a href="https://www.coursera.org/account/accomplishments/specialization/G3V6UGEX3UVN">here</a>)</li>
                         <li>January 2023: Linguaskill English Test level C1 (<a href={Linguaskill}>here</a>)</li>
                     </ul>
                 </div>

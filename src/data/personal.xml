@@ -147,12 +147,17 @@
     </education>
 
     <projects>
-        <time time="First year">
-            <project src="https://github.com/minhngo248/Fractal">Drawing fractal using turtle Python</project>
+        <time time="Fourth year">
+            <project src="https://github.com/MiSa-Com/spring-tourist-app">Tourist App Vietnam developped in Java Spring framework</project>
+            <project src="https://github.com/minhngo248/kc-housing-prediction">King county housing price prediction</project>
+            <project src="https://github.com/minhduc-phung/4IF-AGILE">AGILE project, Java application of itineaire recommandation for shipping</project>
+            <project src="https://github.com/minhngo248/tp_pr_rendu">Real-time chat</project>
+            <project src="https://github.com/minhngo248/expressMinhApp">NodeJS Restful API for search engine of Japanese animes deployed to Microsoft Azure</project>
+            <project src="https://github.com/minhngo248/react_app">React framework to build front-end of Japanese-anime search engine</project>
         </time>
-        <time time="Second year">
-            <project src="https://github.com/minhngo248/jeu2048">Game 2048</project>
-            <project src="https://github.com/minhngo248/Web_Asso_Sport">Web Design for Sportive Club</project>
+        <time time="Internship third year at the Astrophysical Research Centre of Lyon">
+            <project src="https://git-cral.univ-lyon1.fr/minh.ngo/hlsf">Estimation of the Line Spread Function from data of the astrophysical instrument H.A.R.M.O.N.I of European Southern 
+        Observatory</project>
         </time>
         <time time="Third year">
             <project src="https://github.com/minhngo248/Trajet65884">Find the itenery</project>
@@ -161,17 +166,12 @@
             <project src="https://github.com/minhngo248/projetpredict">Front-end project</project>
             <project src="https://github.com/minhngo248/Projet_airwatcher">App for managing the air-quality machine</project>
         </time>
-        <time time="Internship third year at the Astrophysical Research Centre of Lyon">
-            <project src="https://git-cral.univ-lyon1.fr/minh.ngo/hlsf">Estimation of the Line Spread Function from data of the astrophysical instrument H.A.R.M.O.N.I of European Southern 
-        Observatory</project>
+        <time time="Second year">
+            <project src="https://github.com/minhngo248/jeu2048">Game 2048</project>
+            <project src="https://github.com/minhngo248/Web_Asso_Sport">Web Design for Sportive Club</project>
         </time>
-        <time time="Fourth year">
-            <project src="https://github.com/MiSa-Com/spring-tourist-app">Tourist App Vietnam developped in Java Spring framework</project>
-            <project src="https://github.com/minhngo248/kc-housing-prediction">King county housing price prediction</project>
-            <project src="https://github.com/minhduc-phung/4IF-AGILE">AGILE project, Java application of itineaire recommandation for shipping</project>
-            <project src="https://github.com/minhngo248/tp_pr_rendu">Real-time chat</project>
-            <project src="https://github.com/minhngo248/expressMinhApp">NodeJS Restful API for search engine of Japanese animes deployed to Microsoft Azure</project>
-            <project src="https://github.com/minhngo248/react_app">React framework to build front-end of Japanese-anime search engine</project>
+        <time time="First year">
+            <project src="https://github.com/minhngo248/Fractal">Drawing fractal using turtle Python</project>
         </time>
     </projects>
 </personal>
