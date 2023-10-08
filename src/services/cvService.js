@@ -1,5 +1,5 @@
-import { collection, getDocs, doc } from 'firebase/firestore';
-import { db } from '../firebase';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../config/firebaseConfig';
 
 function getAllCVs() {
     return new Promise((resolve, reject) => {

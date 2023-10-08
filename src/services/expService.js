@@ -1,10 +1,10 @@
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
-import { db } from '../firebase';
+import { db } from '../config/firebaseConfig';
 
 function getAllExperiences() {
     const expRef = collection(db, "experience");
     const q = query(expRef, orderBy("from_year", "desc"),
-        orderBy("from_month", "desc"));
+        orderBy("from_month_num", "desc"));
     return new Promise((resolve, reject) => {
         getDocs(q)
             .then((querySnapshot) => {
@@ -19,7 +19,8 @@ function getAllExperiences() {
                         to_month: doc.data().to_month,
                         to_year: doc.data().to_year,
                         job_title: doc.data().job_title,
-                        link_company: doc.data().link_company
+                        link_company: doc.data().link_company,
+                        repo_git: doc.data().repo_git
                     });
                 });
                 resolve(list_exp);
