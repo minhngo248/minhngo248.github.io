@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Deploy Status](https://github.com/minhngo248/minhngo248.github.io/actions/workflows/deploy.yml/badge.svg)
+![Node Version](https://img.shields.io/badge/node-%3E%3D25.0.0-brightgreen)
+![Vite](https://img.shields.io/badge/vite-7.0.0-646CFF?logo=vite)
+![React](https://img.shields.io/badge/react-19.0.0-61DAFB?logo=react)
+
+A modern portfolio website built with React and Vite, featuring responsive design with Tailwind CSS.
+
+## Features
+
+- ⚡️ Lightning-fast development with Vite
+- ⚛️ React 19 with modern JSX transform
+- 🎨 Tailwind CSS for styling
+- 📱 Fully responsive design
+- 🎯 Multiple pages: Home, About, Education
+- 🚀 Optimized production builds
+
+## Prerequisites
+
+- Node.js >= 25.0.0
+- npm (comes with Node.js)
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/minhngo248/minhngo248.github.io.git
+cd portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+### `npm run dev`
 
-### `npm start`
+Starts the Vite development server with Hot Module Replacement (HMR).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Opens automatically at [http://localhost:5173](http://localhost:5173)
+- Changes are reflected instantly without full page reload
+- Fast refresh preserves component state
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the application for production to the `dist` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Optimizes and minifies code for best performance
+- Generates hashed filenames for cache busting
+- Creates optimized CSS with only used Tailwind classes
+- Ready for deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run preview`
 
-### `npm run eject`
+Serves the production build locally for testing.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Previews the built application before deployment
+- Useful for verifying production behavior
+- Runs on a local server (typically port 4173)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+portfolio/
+├── index.html              # Entry point HTML
+├── vite.config.js          # Vite configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── postcss.config.js       # PostCSS configuration
+├── package.json            # Dependencies and scripts
+└── src/
+    ├── main.jsx            # Application entry point
+    ├── App.jsx             # Main application component
+    └── index.css           # Global styles with Tailwind
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+### GitHub Pages Deployment
+
+1. Ensure the workflow file exists at `.github/workflows/deploy.yml`
+2. Enable GitHub Pages in repository settings:
+   - Go to Settings > Pages
+   - Source: GitHub Actions
+3. Push to the `master` branch to trigger deployment
+4. The site will be available at `https://minhngo248.github.io`
+
+### Manual Deployment
+
+To deploy manually to any static hosting service:
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Deploy the `dist` folder to your hosting service (Netlify, Vercel, etc.)
+
+## Technology Stack
+
+- **Build Tool**: Vite 7.0
+- **Framework**: React 19
+- **Styling**: Tailwind CSS 3.4
+- **Icons**: Lucide React
+- **Node.js**: >= 25.0.0
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Vite Documentation](https://vite.dev/)
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [Lucide Icons](https://lucide.dev/)
