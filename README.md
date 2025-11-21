@@ -26,7 +26,7 @@ A modern portfolio website built with React and Vite, featuring responsive desig
 1. Clone the repository:
 ```bash
 git clone https://github.com/minhngo248/minhngo248.github.io.git
-cd portfolio
+cd minhngo248.github.io
 ```
 
 2. Install dependencies:
