@@ -1,25 +1,19 @@
 export const education = [
   {
-    id: 'bachelor-cs',
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of Technology',
-    year: '2015 - 2019',
-    description: 'Focused on software engineering, distributed systems, and cloud computing. Graduated with honors.'
+    id: 'prepa-integree',
+    degree: 'No degree',
+    institution: 'CY Tech',
+    year: '2019 - 2021',
+    description: 'Pre-engineering cycle in Mathematics and Computer Science. Acquired fundamental scientific and technological foundations, developed engineering culture and methodologies, and conducted initial projects while building transversal skills essential for engineering careers.'
   },
   {
     id: 'master-se',
-    degree: 'Master of Science in Software Engineering',
-    institution: 'Tech Institute',
-    year: '2019 - 2021',
-    description: 'Specialized in microservices architecture, DevOps practices, and cloud-native application development.'
+    degree: 'Master of Engineering in Computer Science',
+    institution: 'INSA Lyon',
+    year: '2021 - 2024',
+    description: 'Comprehensive computer science engineering program covering software design techniques, algorithms, distributed systems, artificial intelligence, and real-time systems. Specialized in Big Data Analytics, Cloud Computing, and distributed systems with extensive project-based learning and international exposure.'
   }
 ];
 
 export const courses = [
-  { id: 'aws-architect', name: 'AWS Solutions Architect' },
-  { id: 'kubernetes-admin', name: 'Kubernetes Administration' },
-  { id: 'spring-microservices', name: 'Spring Boot Microservices' },
-  { id: 'docker-mastery', name: 'Docker Mastery' },
-  { id: 'devops-fundamentals', name: 'DevOps Fundamentals' },
-  { id: 'ci-cd-pipeline', name: 'CI/CD Pipeline Design' }
 ];

@@ -1,6 +1,7 @@
 export const skills = [
   { name: 'AWS' },
-  { name: 'Java Spring' },
+  { name: 'Java' },
+  { name: 'Spring' },
   { name: 'DevOps' },
   { name: 'Docker' },
   { name: 'Kubernetes' },
