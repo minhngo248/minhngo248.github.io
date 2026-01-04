@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/education" element={<EducationPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blogs/:id" element={<BlogDetailPage />} />
-        <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
+        <Route path="/projects/:id" element={<ProjectDetailPage />} />
       </Routes>
 
       <Footer />
