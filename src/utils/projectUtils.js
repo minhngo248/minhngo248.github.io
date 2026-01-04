@@ -2,6 +2,8 @@
  * Project utility functions for processing markdown files and metadata extraction
  */
 
+import { projectFiles } from '../data/projectFiles.js';
+
 /**
  * Custom error class for project-related errors
  */
@@ -24,15 +26,11 @@ export class ProjectError extends Error {
  */
 export async function scanProjectFiles() {
   try {
-    const projectFiles = [];
+    const projectFileList = [];
     
-    // List of project files - in production, this could be generated at build time
-    const possibleFiles = [
-      '1.Tourist_project.md',
-      '2.Job_search.md',
-      '3.Java_Stream.md',
-      // Add more files as they are created
-    ];
+    // Use the auto-generated list from build time
+    // To update this list, run: npm run generate-files
+    const possibleFiles = projectFiles;
     
     if (possibleFiles.length === 0) {
       console.warn('No project files configured for scanning');
@@ -43,7 +41,7 @@ export async function scanProjectFiles() {
       try {
         const response = await fetch(`/projects/${filename}`);
         if (response.ok) {
-          projectFiles.push(filename);
+          projectFileList.push(filename);
         } else if (response.status === 404) {
           console.info(`Project file ${filename} not found (404)`);
         } else {
@@ -58,7 +56,7 @@ export async function scanProjectFiles() {
       }
     }
     
-    return projectFiles;
+    return projectFileList;
   } catch (error) {
     console.error('Error scanning project files:', error);
     throw new ProjectError('Failed to scan project directory. The projects directory may not exist or be accessible.', error, 'DIRECTORY_ERROR');

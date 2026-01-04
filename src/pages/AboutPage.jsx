@@ -57,10 +57,10 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto px-4 py-20">
         {/* Biography Section */}
         <section className="mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
             About Me
           </h2>
-          <div className="text-slate-300 text-lg space-y-4 text-justify">
+          <div className="text-slate-700 dark:text-slate-300 text-lg space-y-4 text-justify">
             <p>
               I'm Minh Ngo, a backend developer with a passion for Cloud native technologies, 
               DevOps practices, and building scalable applications that solve real-world problems.
@@ -82,12 +82,12 @@ export default function AboutPage() {
 
         {/* Skills Section */}
         <section className="mb-16">
-          <h3 className="text-3xl font-bold mb-6">Technical Skills</h3>
+          <h3 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Technical Skills</h3>
           <div className="flex flex-wrap gap-3">
             {skills.map(skill => (
               <span 
                 key={skill.name} 
-                className="bg-blue-500/30 text-blue-300 px-4 py-2 rounded-lg text-lg font-semibold"
+                className="bg-blue-500/20 dark:bg-blue-500/30 text-blue-700 dark:text-blue-300 px-4 py-2 rounded-lg text-lg font-semibold"
               >
                 {skill.name}
               </span>
@@ -97,23 +97,23 @@ export default function AboutPage() {
 
         {/* Recent Projects Section */}
         <section>
-          <h3 className="text-3xl font-bold mb-6">Recent Projects</h3>
+          <h3 className="text-3xl font-bold mb-6 text-slate-900 dark:text-white">Recent Projects</h3>
           
           {loading && (
             <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 dark:border-blue-400"></div>
             </div>
           )}
 
           {error && (
-            <div className="bg-red-900/20 border border-red-500 rounded-lg p-6 text-center">
-              <p className="text-red-400 mb-4">{error}</p>
+            <div className="bg-red-100 dark:bg-red-900/20 border border-red-400 dark:border-red-500 rounded-lg p-6 text-center">
+              <p className="text-red-700 dark:text-red-400 mb-4">{error}</p>
             </div>
           )}
 
           {!loading && !error && projects.length === 0 && (
             <div className="text-center py-20">
-              <p className="text-slate-400 text-lg">No projects available yet.</p>
+              <p className="text-slate-500 dark:text-slate-400 text-lg">No projects available yet.</p>
             </div>
           )}
 
