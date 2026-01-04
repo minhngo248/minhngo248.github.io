@@ -2,6 +2,8 @@
  * Blog utility functions for processing markdown files and metadata extraction
  */
 
+import { blogFiles } from '../data/blogFiles.js';
+
 /**
  * Scans the public/blogs directory for markdown files
  * @returns {Promise<string[]>} Array of blog filenames
@@ -9,18 +11,12 @@
 export async function scanBlogFiles() {
   try {
     // In a browser environment, we can't directly scan directories
-    // We'll need to maintain a list of blog files or use a different approach
-    // For now, we'll implement a fetch-based approach that tries to load known files
-    const blogFiles = [];
+    // We use a pre-generated list of blog files created at build time
+    // To update this list, run: npm run generate-files
+    const blogFileList = [];
     
-    // Try to fetch blog files by attempting common patterns
-    // This is a limitation of browser environments - we can't scan directories
-    // In a real implementation, this might be generated at build time
-    const possibleFiles = [
-      '1.Resolution_for_2026.md',
-      '2.All_things_about_AI.md',
-      // Add more files as they are created
-    ];
+    // Use the auto-generated list from build time
+    const possibleFiles = blogFiles;
     
     // First, check if the blogs directory exists by trying to fetch a known file
     if (possibleFiles.length === 0) {
@@ -32,7 +28,7 @@ export async function scanBlogFiles() {
       try {
         const response = await fetch(`/blogs/${filename}`);
         if (response.ok) {
-          blogFiles.push(filename);
+          blogFileList.push(filename);
         } else if (response.status === 404) {
           console.info(`Blog file ${filename} not found (404)`);
         } else {
@@ -48,7 +44,7 @@ export async function scanBlogFiles() {
       }
     }
     
-    return blogFiles;
+    return blogFileList;
   } catch (error) {
     console.error('Error scanning blog files:', error);
     throw new BlogError('Failed to scan blog directory. The blogs directory may not exist or be accessible.', error, 'DIRECTORY_ERROR');

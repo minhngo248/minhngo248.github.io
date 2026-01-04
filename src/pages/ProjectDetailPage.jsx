@@ -103,10 +103,10 @@ export default function ProjectDetailPage() {
   if (loading) {
     return (
       <ErrorBoundary>
-        <div className="min-h-screen bg-slate-900 text-white pt-20">
+        <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-20">
           <div className="max-w-4xl mx-auto px-4 py-16">
             <div className="flex justify-center items-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 dark:border-blue-400"></div>
             </div>
           </div>
         </div>
@@ -117,12 +117,12 @@ export default function ProjectDetailPage() {
   if (error) {
     return (
       <ErrorBoundary>
-        <div className="min-h-screen bg-slate-900 text-white pt-20">
+        <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-20">
           <div className="max-w-4xl mx-auto px-4 py-16">
-            <div className="bg-red-900/20 border border-red-500 rounded-lg p-8 text-center">
-              <div className="text-red-400 text-5xl mb-4">⚠️</div>
-              <h2 className="text-2xl font-bold mb-4">Error Loading Project</h2>
-              <p className="text-red-400 mb-6">{error}</p>
+            <div className="bg-red-100 dark:bg-red-900/20 border border-red-400 dark:border-red-500 rounded-lg p-8 text-center">
+              <div className="text-red-600 dark:text-red-400 text-5xl mb-4">⚠️</div>
+              <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Error Loading Project</h2>
+              <p className="text-red-600 dark:text-red-400 mb-6">{error}</p>
               <Link
                 to="/about"
                 className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
@@ -139,10 +139,10 @@ export default function ProjectDetailPage() {
   if (!project) {
     return (
       <ErrorBoundary>
-        <div className="min-h-screen bg-slate-900 text-white pt-20">
+        <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-20">
           <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-            <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-            <p className="text-slate-400 mb-8">
+            <h1 className="text-4xl font-bold mb-4 text-slate-900 dark:text-white">Project Not Found</h1>
+            <p className="text-slate-600 dark:text-slate-400 mb-8">
               The project you're looking for doesn't exist or has been removed.
             </p>
             <Link
@@ -159,12 +159,12 @@ export default function ProjectDetailPage() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-slate-900 text-white pt-20">
+      <div className="min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white pt-20">
         <article className="max-w-4xl mx-auto px-4 py-16">
           {/* Back button */}
           <Link
             to="/about"
-            className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors"
+            className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 mb-8 transition-colors"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -235,44 +235,44 @@ export default function ProjectDetailPage() {
             <ReactMarkdown
               components={{
                 h1: ({ children }) => (
-                  <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-8 first:mt-0 text-white border-b border-slate-700 pb-4 leading-tight">
+                  <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-8 first:mt-0 text-slate-900 dark:text-white border-b border-slate-300 dark:border-slate-700 pb-4 leading-tight">
                     {children}
                   </h1>
                 ),
                 h2: ({ children }) => (
-                  <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10 text-blue-400 leading-tight">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10 text-blue-600 dark:text-blue-400 leading-tight">
                     {children}
                   </h2>
                 ),
                 h3: ({ children }) => (
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 mt-8 text-cyan-400 leading-tight">
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 mt-8 text-cyan-600 dark:text-cyan-400 leading-tight">
                     {children}
                   </h3>
                 ),
                 h4: ({ children }) => (
-                  <h4 className="text-lg md:text-xl font-bold mb-2 mt-6 text-white leading-tight">
+                  <h4 className="text-lg md:text-xl font-bold mb-2 mt-6 text-slate-900 dark:text-white leading-tight">
                     {children}
                   </h4>
                 ),
                 h5: ({ children }) => (
-                  <h5 className="text-base md:text-lg font-bold mb-2 mt-4 text-slate-200 leading-tight">
+                  <h5 className="text-base md:text-lg font-bold mb-2 mt-4 text-slate-800 dark:text-slate-200 leading-tight">
                     {children}
                   </h5>
                 ),
                 h6: ({ children }) => (
-                  <h6 className="text-sm md:text-base font-bold mb-2 mt-4 text-slate-300 leading-tight">
+                  <h6 className="text-sm md:text-base font-bold mb-2 mt-4 text-slate-700 dark:text-slate-300 leading-tight">
                     {children}
                   </h6>
                 ),
                 p: ({ children }) => (
-                  <p className="mb-6 text-slate-300 leading-relaxed text-base md:text-lg">
+                  <p className="mb-6 text-slate-700 dark:text-slate-300 leading-relaxed text-base md:text-lg">
                     {children}
                   </p>
                 ),
                 a: ({ href, children }) => (
                   <a 
                     href={href} 
-                    className="text-blue-400 hover:text-blue-300 underline decoration-blue-400/50 hover:decoration-blue-300 underline-offset-2 transition-colors font-medium"
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 underline decoration-blue-500/50 dark:decoration-blue-400/50 hover:decoration-blue-400 dark:hover:decoration-blue-300 underline-offset-2 transition-colors font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -280,38 +280,38 @@ export default function ProjectDetailPage() {
                   </a>
                 ),
                 ul: ({ children }) => (
-                  <ul className="mb-6 space-y-2 text-slate-300 list-disc list-outside ml-6">
+                  <ul className="mb-6 space-y-2 text-slate-700 dark:text-slate-300 list-disc list-outside ml-6">
                     {children}
                   </ul>
                 ),
                 ol: ({ children }) => (
-                  <ol className="mb-6 space-y-2 text-slate-300 list-decimal list-outside ml-6">
+                  <ol className="mb-6 space-y-2 text-slate-700 dark:text-slate-300 list-decimal list-outside ml-6">
                     {children}
                   </ol>
                 ),
                 li: ({ children }) => (
-                  <li className="text-slate-300 leading-relaxed pl-2">
+                  <li className="text-slate-700 dark:text-slate-300 leading-relaxed pl-2">
                     {children}
                   </li>
                 ),
                 blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-blue-400 pl-6 pr-4 my-8 italic text-slate-300 bg-slate-800/50 py-4 rounded-r-lg">
+                  <blockquote className="border-l-4 border-blue-500 dark:border-blue-400 pl-6 pr-4 my-8 italic text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/50 py-4 rounded-r-lg">
                     {children}
                   </blockquote>
                 ),
                 code: ({ inline, children }) => (
                   inline ? (
-                    <code className="bg-slate-800 text-cyan-400 px-2 py-1 rounded text-sm font-mono border border-slate-700">
+                    <code className="bg-slate-200 dark:bg-slate-800 text-cyan-700 dark:text-cyan-400 px-2 py-1 rounded text-sm font-mono border border-slate-300 dark:border-slate-700">
                       {children}
                     </code>
                   ) : (
-                    <code className="block bg-slate-900 text-cyan-400 p-4 rounded-lg text-sm font-mono overflow-x-auto border border-slate-700 leading-relaxed">
+                    <code className="block bg-slate-100 dark:bg-slate-900 text-cyan-700 dark:text-cyan-400 p-4 rounded-lg text-sm font-mono overflow-x-auto border border-slate-300 dark:border-slate-700 leading-relaxed">
                       {children}
                     </code>
                   )
                 ),
                 pre: ({ children }) => (
-                  <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto mb-6 border border-slate-700 shadow-lg">
+                  <pre className="bg-slate-100 dark:bg-slate-900 p-4 rounded-lg overflow-x-auto mb-6 border border-slate-300 dark:border-slate-700 shadow-lg">
                     {children}
                   </pre>
                 ),
@@ -320,58 +320,58 @@ export default function ProjectDetailPage() {
                     <img 
                       src={src} 
                       alt={alt} 
-                      className="max-w-full h-auto rounded-lg shadow-xl border border-slate-700 mx-auto"
+                      className="max-w-full h-auto rounded-lg shadow-xl border border-slate-300 dark:border-slate-700 mx-auto"
                       onError={(e) => {
                         console.warn(`Failed to load image: ${src}`);
                         e.target.style.display = 'none';
                         const altDiv = document.createElement('div');
-                        altDiv.className = 'bg-slate-800 border border-slate-700 rounded-lg p-4 text-slate-400 italic';
+                        altDiv.className = 'bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg p-4 text-slate-600 dark:text-slate-400 italic';
                         altDiv.textContent = alt || 'Image failed to load';
                         e.target.parentNode.appendChild(altDiv);
                       }}
                     />
                     {alt && (
-                      <p className="text-sm text-slate-400 mt-2 italic">{alt}</p>
+                      <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 italic">{alt}</p>
                     )}
                   </div>
                 ),
                 table: ({ children }) => (
-                  <div className="overflow-x-auto my-8 rounded-lg border border-slate-700 shadow-lg">
+                  <div className="overflow-x-auto my-8 rounded-lg border border-slate-300 dark:border-slate-700 shadow-lg">
                     <table className="min-w-full">
                       {children}
                     </table>
                   </div>
                 ),
                 thead: ({ children }) => (
-                  <thead className="bg-slate-800">
+                  <thead className="bg-slate-100 dark:bg-slate-800">
                     {children}
                   </thead>
                 ),
                 tbody: ({ children }) => (
-                  <tbody className="bg-slate-900/50">
+                  <tbody className="bg-white dark:bg-slate-900/50">
                     {children}
                   </tbody>
                 ),
                 th: ({ children }) => (
-                  <th className="border-b border-slate-700 px-6 py-3 text-white font-semibold text-left text-sm uppercase tracking-wider">
+                  <th className="border-b border-slate-300 dark:border-slate-700 px-6 py-3 text-slate-900 dark:text-white font-semibold text-left text-sm uppercase tracking-wider">
                     {children}
                   </th>
                 ),
                 td: ({ children }) => (
-                  <td className="border-b border-slate-700 px-6 py-4 text-slate-300 text-sm">
+                  <td className="border-b border-slate-300 dark:border-slate-700 px-6 py-4 text-slate-700 dark:text-slate-300 text-sm">
                     {children}
                   </td>
                 ),
                 hr: () => (
-                  <hr className="border-slate-700 my-12 border-t-2" />
+                  <hr className="border-slate-300 dark:border-slate-700 my-12 border-t-2" />
                 ),
                 strong: ({ children }) => (
-                  <strong className="font-bold text-white">
+                  <strong className="font-bold text-slate-900 dark:text-white">
                     {children}
                   </strong>
                 ),
                 em: ({ children }) => (
-                  <em className="italic text-slate-200">
+                  <em className="italic text-slate-700 dark:text-slate-200">
                     {children}
                   </em>
                 )

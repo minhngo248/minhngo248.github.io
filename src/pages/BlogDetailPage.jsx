@@ -162,7 +162,7 @@ export default function BlogDetailPage() {
           {blog.title || `Blog Post ${blog.id}`}
         </h1>
         
-        <div className="flex flex-wrap gap-4 md:gap-6 text-slate-400 border-b border-slate-700 pb-6">
+        <div className="flex flex-wrap gap-4 md:gap-6 text-slate-600 dark:text-slate-400 mb-4">
           {blog.author && (
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -190,6 +190,24 @@ export default function BlogDetailPage() {
             </div>
           )}
         </div>
+
+        {/* Tags */}
+        {blog.tags && blog.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 pb-6 border-b border-slate-300 dark:border-slate-700">
+            {blog.tags.map((tag, index) => (
+              <span 
+                key={index} 
+                className="bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {!blog.tags || blog.tags.length === 0 ? (
+          <div className="border-b border-slate-300 dark:border-slate-700 pb-6"></div>
+        ) : null}
       </header>
 
       {/* Blog content */}
@@ -202,44 +220,44 @@ export default function BlogDetailPage() {
             components={{
               // Enhanced styling for markdown elements with better typography and spacing
               h1: ({ children }) => (
-                <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-8 first:mt-0 text-white border-b border-slate-700 pb-4 leading-tight">
+                <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-8 first:mt-0 text-slate-900 dark:text-white border-b border-slate-300 dark:border-slate-700 pb-4 leading-tight">
                   {children}
                 </h1>
               ),
               h2: ({ children }) => (
-                <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10 text-blue-400 leading-tight">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 mt-10 text-blue-600 dark:text-blue-400 leading-tight">
                   {children}
                 </h2>
               ),
               h3: ({ children }) => (
-                <h3 className="text-xl md:text-2xl font-bold mb-3 mt-8 text-cyan-400 leading-tight">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 mt-8 text-cyan-600 dark:text-cyan-400 leading-tight">
                   {children}
                 </h3>
               ),
               h4: ({ children }) => (
-                <h4 className="text-lg md:text-xl font-bold mb-2 mt-6 text-white leading-tight">
+                <h4 className="text-lg md:text-xl font-bold mb-2 mt-6 text-slate-900 dark:text-white leading-tight">
                   {children}
                 </h4>
               ),
               h5: ({ children }) => (
-                <h5 className="text-base md:text-lg font-bold mb-2 mt-4 text-slate-200 leading-tight">
+                <h5 className="text-base md:text-lg font-bold mb-2 mt-4 text-slate-800 dark:text-slate-200 leading-tight">
                   {children}
                 </h5>
               ),
               h6: ({ children }) => (
-                <h6 className="text-sm md:text-base font-bold mb-2 mt-4 text-slate-300 leading-tight">
+                <h6 className="text-sm md:text-base font-bold mb-2 mt-4 text-slate-700 dark:text-slate-300 leading-tight">
                   {children}
                 </h6>
               ),
               p: ({ children }) => (
-                <p className="mb-6 text-slate-300 leading-relaxed text-base md:text-lg text-justify">
+                <p className="mb-6 text-slate-700 dark:text-slate-300 leading-relaxed text-base md:text-lg text-justify">
                   {children}
                 </p>
               ),
               a: ({ href, children }) => (
                 <a 
                   href={href} 
-                  className="text-blue-400 hover:text-blue-300 underline decoration-blue-400/50 hover:decoration-blue-300 underline-offset-2 transition-colors font-medium"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 underline decoration-blue-500/50 dark:decoration-blue-400/50 hover:decoration-blue-400 dark:hover:decoration-blue-300 underline-offset-2 transition-colors font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -247,38 +265,38 @@ export default function BlogDetailPage() {
                 </a>
               ),
               ul: ({ children }) => (
-                <ul className="mb-6 space-y-2 text-slate-300 list-disc list-outside ml-6">
+                <ul className="mb-6 space-y-2 text-slate-700 dark:text-slate-300 list-disc list-outside ml-6">
                   {children}
                 </ul>
               ),
               ol: ({ children }) => (
-                <ol className="mb-6 space-y-2 text-slate-300 list-decimal list-outside ml-6">
+                <ol className="mb-6 space-y-2 text-slate-700 dark:text-slate-300 list-decimal list-outside ml-6">
                   {children}
                 </ol>
               ),
               li: ({ children }) => (
-                <li className="text-slate-300 leading-relaxed pl-2">
+                <li className="text-slate-700 dark:text-slate-300 leading-relaxed pl-2">
                   {children}
                 </li>
               ),
               blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-blue-400 pl-6 pr-4 my-8 italic text-slate-300 bg-slate-800/50 py-4 rounded-r-lg">
+                <blockquote className="border-l-4 border-blue-500 dark:border-blue-400 pl-6 pr-4 my-8 italic text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/50 py-4 rounded-r-lg">
                   {children}
                 </blockquote>
               ),
               code: ({ inline, children }) => (
                 inline ? (
-                  <code className="bg-slate-800 text-cyan-400 px-2 py-1 rounded text-sm font-mono border border-slate-700">
+                  <code className="bg-slate-200 dark:bg-slate-800 text-cyan-700 dark:text-cyan-400 px-2 py-1 rounded text-sm font-mono border border-slate-300 dark:border-slate-700">
                     {children}
                   </code>
                 ) : (
-                  <code className="block bg-slate-900 text-cyan-400 p-4 rounded-lg text-sm font-mono overflow-x-auto border border-slate-700 leading-relaxed">
+                  <code className="block bg-slate-100 dark:bg-slate-900 text-cyan-700 dark:text-cyan-400 p-4 rounded-lg text-sm font-mono overflow-x-auto border border-slate-300 dark:border-slate-700 leading-relaxed">
                     {children}
                   </code>
                 )
               ),
               pre: ({ children }) => (
-                <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto mb-6 border border-slate-700 shadow-lg">
+                <pre className="bg-slate-100 dark:bg-slate-900 p-4 rounded-lg overflow-x-auto mb-6 border border-slate-300 dark:border-slate-700 shadow-lg">
                   {children}
                 </pre>
               ),
@@ -287,59 +305,59 @@ export default function BlogDetailPage() {
                   <img 
                     src={src} 
                     alt={alt} 
-                    className="max-w-full h-auto rounded-lg shadow-xl border border-slate-700 mx-auto"
+                    className="max-w-full h-auto rounded-lg shadow-xl border border-slate-300 dark:border-slate-700 mx-auto"
                     onError={(e) => {
                       console.warn(`Failed to load image: ${src}`);
                       e.target.style.display = 'none';
                       // Show alt text if image fails to load
                       const altDiv = document.createElement('div');
-                      altDiv.className = 'bg-slate-800 border border-slate-700 rounded-lg p-4 text-slate-400 italic';
+                      altDiv.className = 'bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-lg p-4 text-slate-600 dark:text-slate-400 italic';
                       altDiv.textContent = alt || 'Image failed to load';
                       e.target.parentNode.appendChild(altDiv);
                     }}
                   />
                   {alt && (
-                    <p className="text-sm text-slate-400 mt-2 italic">{alt}</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 italic">{alt}</p>
                   )}
                 </div>
               ),
               table: ({ children }) => (
-                <div className="overflow-x-auto my-8 rounded-lg border border-slate-700 shadow-lg">
+                <div className="overflow-x-auto my-8 rounded-lg border border-slate-300 dark:border-slate-700 shadow-lg">
                   <table className="min-w-full">
                     {children}
                   </table>
                 </div>
               ),
               thead: ({ children }) => (
-                <thead className="bg-slate-800">
+                <thead className="bg-slate-100 dark:bg-slate-800">
                   {children}
                 </thead>
               ),
               tbody: ({ children }) => (
-                <tbody className="bg-slate-900/50">
+                <tbody className="bg-white dark:bg-slate-900/50">
                   {children}
                 </tbody>
               ),
               th: ({ children }) => (
-                <th className="border-b border-slate-700 px-6 py-3 text-white font-semibold text-left text-sm uppercase tracking-wider">
+                <th className="border-b border-slate-300 dark:border-slate-700 px-6 py-3 text-slate-900 dark:text-white font-semibold text-left text-sm uppercase tracking-wider">
                   {children}
                 </th>
               ),
               td: ({ children }) => (
-                <td className="border-b border-slate-700 px-6 py-4 text-slate-300 text-sm">
+                <td className="border-b border-slate-300 dark:border-slate-700 px-6 py-4 text-slate-700 dark:text-slate-300 text-sm">
                   {children}
                 </td>
               ),
               hr: () => (
-                <hr className="border-slate-700 my-12 border-t-2" />
+                <hr className="border-slate-300 dark:border-slate-700 my-12 border-t-2" />
               ),
               strong: ({ children }) => (
-                <strong className="font-bold text-white">
+                <strong className="font-bold text-slate-900 dark:text-white">
                   {children}
                 </strong>
               ),
               em: ({ children }) => (
-                <em className="italic text-slate-200">
+                <em className="italic text-slate-700 dark:text-slate-200">
                   {children}
                 </em>
               )
@@ -351,10 +369,10 @@ export default function BlogDetailPage() {
       </ErrorBoundary>
 
       {/* Navigation footer */}
-      <footer className="mt-12 pt-8 border-t border-slate-700">
+      <footer className="mt-12 pt-8 border-t border-slate-300 dark:border-slate-700">
         <Link 
           to="/blog" 
-          className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold transition"
+          className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

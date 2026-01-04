@@ -125,8 +125,8 @@ export default function BlogPage() {
     return (
       <section className="max-w-4xl mx-auto px-4 py-20">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-400 mx-auto mb-6"></div>
-          <p className="text-slate-300 text-lg">Loading blog posts...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 dark:border-blue-400 mx-auto mb-6"></div>
+          <p className="text-slate-700 dark:text-slate-300 text-lg">Loading blog posts...</p>
         </div>
       </section>
     );
@@ -136,14 +136,14 @@ export default function BlogPage() {
     return (
       <section className="max-w-4xl mx-auto px-4 py-20">
         <div className="text-center">
-          <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-8 mb-8 max-w-md mx-auto">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-red-50 dark:bg-red-500/10 border border-red-300 dark:border-red-500/30 rounded-xl p-8 mb-8 max-w-md mx-auto">
+            <div className="w-16 h-16 bg-red-100 dark:bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
             </div>
-            <h2 className="text-xl font-semibold text-red-400 mb-3">Error Loading Blogs</h2>
-            <p className="text-slate-300 mb-6 leading-relaxed">{error}</p>
+            <h2 className="text-xl font-semibold text-red-700 dark:text-red-400 mb-3">Error Loading Blogs</h2>
+            <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">{error}</p>
             <button 
               onClick={() => window.location.reload()} 
               className="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold transition-colors"
@@ -164,20 +164,20 @@ export default function BlogPage() {
     >
       <section className="max-w-4xl mx-auto px-4 py-20">
       <div className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
           Blog Posts
         </h1>
-        <p className="text-xl text-slate-300">
+        <p className="text-xl text-slate-700 dark:text-slate-300">
           Thoughts, experiences, and insights from my journey in software development.
         </p>
       </div>
 
       {/* Filter Bar */}
-      <div className="mb-8 bg-slate-800/50 border border-slate-700 rounded-xl p-6">
+      <div className="mb-8 bg-slate-100 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-xl p-6">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
           {/* Search Input */}
           <div className="flex-1">
-            <label htmlFor="search" className="block text-sm font-medium text-slate-300 mb-2">
+            <label htmlFor="search" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
               Search by title or description
             </label>
             <div className="relative">
@@ -187,9 +187,9 @@ export default function BlogPage() {
                 placeholder="Search blog posts..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 pl-10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2 pl-10 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent"
               />
-              <svg className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="absolute left-3 top-2.5 h-4 w-4 text-slate-500 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
@@ -197,14 +197,14 @@ export default function BlogPage() {
 
           {/* Sort Order */}
           <div className="lg:w-48">
-            <label htmlFor="sort" className="block text-sm font-medium text-slate-300 mb-2">
+            <label htmlFor="sort" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
               Sort by date
             </label>
             <select
               id="sort"
               value={sortOrder}
               onChange={(e) => setSortOrder(e.target.value)}
-              className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="w-full bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg px-4 py-2 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent"
             >
               <option value="newest">Most Recent</option>
               <option value="oldest">Earliest</option>
@@ -215,7 +215,7 @@ export default function BlogPage() {
         {/* Tags Filter */}
         {availableTags.length > 0 && (
           <div className="mt-4">
-            <label className="block text-sm font-medium text-slate-300 mb-2">
+            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
               Filter by tags
             </label>
             <div className="flex flex-wrap gap-2">
@@ -226,7 +226,7 @@ export default function BlogPage() {
                   className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
                     selectedTags.includes(tag)
                       ? 'bg-blue-500 text-white'
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                      : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
                   }`}
                 >
                   {tag}
@@ -239,25 +239,25 @@ export default function BlogPage() {
         {/* Active Filters & Clear */}
         {(searchQuery || selectedTags.length > 0 || sortOrder !== 'newest') && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="text-sm text-slate-400">Active filters:</span>
+            <span className="text-sm text-slate-600 dark:text-slate-400">Active filters:</span>
             {searchQuery && (
-              <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-sm">
+              <span className="px-2 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded text-sm">
                 Search: "{searchQuery}"
               </span>
             )}
             {selectedTags.map(tag => (
-              <span key={tag} className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-sm">
+              <span key={tag} className="px-2 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded text-sm">
                 Tag: {tag}
               </span>
             ))}
             {sortOrder !== 'newest' && (
-              <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-sm">
+              <span className="px-2 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded text-sm">
                 Sort: {sortOrder === 'oldest' ? 'Earliest' : 'Most Recent'}
               </span>
             )}
             <button
               onClick={clearAllFilters}
-              className="px-3 py-1 bg-slate-600 hover:bg-slate-500 text-slate-300 rounded text-sm transition-colors"
+              className="px-3 py-1 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500 text-slate-700 dark:text-slate-300 rounded text-sm transition-colors"
             >
               Clear All
             </button>
@@ -265,21 +265,21 @@ export default function BlogPage() {
         )}
 
         {/* Results Count */}
-        <div className="mt-4 text-sm text-slate-400">
+        <div className="mt-4 text-sm text-slate-600 dark:text-slate-400">
           Showing {filteredBlogs.length} of {allBlogs.length} blog posts
         </div>
       </div>
 
       {filteredBlogs.length === 0 && allBlogs.length > 0 ? (
         <div className="text-center py-16">
-          <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 max-w-md mx-auto">
-            <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-slate-100 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-xl p-8 max-w-md mx-auto">
+            <div className="w-16 h-16 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-slate-600 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h2 className="text-2xl font-semibold text-slate-300 mb-4">No Posts Found</h2>
-            <p className="text-slate-400 leading-relaxed mb-4">
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-300 mb-4">No Posts Found</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
               No blog posts match your current filters. Try adjusting your search or clearing some filters.
             </p>
             <button
@@ -292,14 +292,14 @@ export default function BlogPage() {
         </div>
       ) : filteredBlogs.length === 0 ? (
         <div className="text-center py-16">
-          <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-8 max-w-md mx-auto">
-            <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="bg-slate-100 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-700 rounded-xl p-8 max-w-md mx-auto">
+            <div className="w-16 h-16 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-slate-600 dark:text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
-            <h2 className="text-2xl font-semibold text-slate-300 mb-4">No Blog Posts Yet</h2>
-            <p className="text-slate-400 leading-relaxed">
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-300 mb-4">No Blog Posts Yet</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Check back soon for new content! I'm working on some exciting posts to share.
             </p>
           </div>
@@ -309,7 +309,7 @@ export default function BlogPage() {
           {filteredBlogs.map((blog) => (
             <article 
               key={blog.id} 
-              className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 md:p-8 hover:border-blue-400/50 hover:bg-slate-800/70 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-6 md:p-8 hover:border-blue-500 dark:hover:border-blue-400/50 hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <div className="flex flex-col gap-4 mb-6">
                 <div className="flex-1">
@@ -317,12 +317,12 @@ export default function BlogPage() {
                     to={`/blogs/${blog.id}`}
                     className="block group"
                   >
-                    <h2 className="text-2xl md:text-3xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3 leading-tight">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 leading-tight">
                       {blog.title || `Blog Post ${blog.id}`}
                     </h2>
                   </Link>
                   
-                  <div className="flex flex-wrap gap-4 md:gap-6 text-sm text-slate-400 mb-4">
+                  <div className="flex flex-wrap gap-4 md:gap-6 text-sm text-slate-600 dark:text-slate-400 mb-4">
                     {blog.author && (
                       <span className="flex items-center gap-2">
                         <svg className="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -354,7 +354,7 @@ export default function BlogPage() {
               </div>
 
               {blog.description && (
-                <p className="text-slate-300 mb-6 leading-relaxed text-base md:text-lg">
+                <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed text-base md:text-lg">
                   {blog.description}
                 </p>
               )}
@@ -365,7 +365,7 @@ export default function BlogPage() {
                   {blog.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-sm font-medium"
+                      className="px-2 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 rounded text-sm font-medium"
                     >
                       {tag}
                     </span>
@@ -375,7 +375,7 @@ export default function BlogPage() {
 
               <Link 
                 to={`/blogs/${blog.id}`}
-                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors group"
+                className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 font-semibold transition-colors group"
               >
                 Read More
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
