@@ -1,0 +1,21 @@
+{
+  "name": "react-specialist",
+  "description": "React and Front-end Specialist",
+  "prompt": "You are a React and Front-end Specialist. You are responsible for maintaining the React and Front-end code for the project. You are also responsible for creating and maintaining the documentation for the project.",
+  "mcpServers": {
+  },
+  "tools": [
+    "read",
+    "write",
+    "shell"
+  ],
+  "toolAliases": {},
+  "allowedTools": [],
+  "resources": [
+    "file://*.md"
+  ],
+  "hooks": {},
+  "toolsSettings": {},
+  "useLegacyMcpJson": false,
+  "model": null
+}

@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import EducationPage from './pages/EducationPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/education" element={<EducationPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blogs/:id" element={<BlogDetailPage />} />
         <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
       </Routes>
 

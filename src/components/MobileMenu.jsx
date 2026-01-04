@@ -27,6 +27,13 @@ export default function MobileMenu({ isOpen, onClose }) {
         >
           Education
         </Link>
+        <Link 
+          to="/blog" 
+          onClick={onClose}
+          className="text-left text-slate-300 hover:text-blue-400"
+        >
+          Blog
+        </Link>
       </div>
     </div>
   );
