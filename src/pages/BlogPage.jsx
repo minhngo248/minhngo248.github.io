@@ -305,7 +305,7 @@ export default function BlogPage() {
           </div>
         </div>
       ) : (
-        <div className="space-y-8">
+        <div className="flex flex-col space-y-8">
           {filteredBlogs.map((blog) => (
             <article 
               key={blog.id} 

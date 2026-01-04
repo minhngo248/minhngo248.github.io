@@ -10,7 +10,7 @@ export default function EducationPage() {
           Education
         </h2>
         <div className="space-y-6">
-          {education.map(edu => (
+          {[...education].reverse().map(edu => (
             <div key={edu.id} className="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-lg border border-slate-300 dark:border-slate-700">
               <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">{edu.degree}</h3>
               <p className="text-xl text-slate-700 dark:text-slate-300 mb-2">{edu.institution}</p>
@@ -27,7 +27,7 @@ export default function EducationPage() {
           Certifications
         </h2>
         <div className="space-y-6">
-          {certifications.map(cert => (
+          {[...certifications].reverse().map(cert => (
             <div key={cert.id} className="bg-slate-100 dark:bg-slate-800/50 p-6 rounded-lg border border-slate-300 dark:border-slate-700">
               <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">{cert.name}</h3>
               <p className="text-xl text-slate-700 dark:text-slate-300 mb-2">{cert.issuer}</p>
@@ -54,7 +54,7 @@ export default function EducationPage() {
           Online Courses
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map(course => (
+          {[...courses].reverse().map(course => (
             <div key={course.id} className="bg-slate-100 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-300 dark:border-slate-700">
               <p className="text-slate-700 dark:text-slate-300 font-semibold">{course.name}</p>
             </div>
