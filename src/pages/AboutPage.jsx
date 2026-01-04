@@ -10,7 +10,7 @@ export default function AboutPage() {
         <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           About Me
         </h2>
-        <div className="text-slate-300 space-y-4 text-lg">
+        <div className="text-slate-300 text-lg space-y-4 text-justify">
           <p>
             I'm Minh Ngo, a backend developer with a passion for Cloud native technologies, 
             DevOps practices, and building scalable applications that solve real-world problems.
