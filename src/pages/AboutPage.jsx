@@ -62,12 +62,12 @@ export default function AboutPage() {
           </h2>
           <div className="text-slate-700 dark:text-slate-300 text-lg space-y-4 text-justify">
             <p>
-              I'm Minh Ngo, a backend developer with a passion for Cloud native technologies, 
+              I'm Minh Ngo, an active learner, and a backend developer with a passion for Cloud native technologies, 
               DevOps practices, and building scalable applications that solve real-world problems.
             </p>
             <p>
-              My expertise lies in designing and implementing robust backend systems using modern 
-              technologies and best practices. I specialize in microservices architecture, 
+              My interest lies in designing and implementing robust backend systems using modern 
+              technologies and best practices. I would love to implementing microservices architecture, 
               containerization, and cloud infrastructure, with a focus on creating solutions 
               that are both performant and maintainable.
             </p>

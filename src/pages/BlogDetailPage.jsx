@@ -1,8 +1,39 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import mermaid from 'mermaid';
 import { findBlogById, BlogError } from '../utils/blogUtils';
 import ErrorBoundary from '../components/ErrorBoundary';
+
+// Mermaid component
+function MermaidDiagram({ chart }) {
+  const ref = useRef(null);
+  const [svg, setSvg] = useState('');
+
+  useEffect(() => {
+    mermaid.initialize({ 
+      startOnLoad: true,
+      theme: document.documentElement.classList.contains('dark') ? 'dark' : 'default',
+      securityLevel: 'loose',
+    });
+
+    const renderDiagram = async () => {
+      if (ref.current && chart) {
+        try {
+          const { svg } = await mermaid.render(`mermaid-${Date.now()}`, chart);
+          setSvg(svg);
+        } catch (error) {
+          console.error('Mermaid rendering error:', error);
+          setSvg(`<pre>Error rendering diagram: ${error.message}</pre>`);
+        }
+      }
+    };
+
+    renderDiagram();
+  }, [chart]);
+
+  return <div ref={ref} dangerouslySetInnerHTML={{ __html: svg }} className="my-8 flex justify-center" />;
+}
 
 export default function BlogDetailPage() {
   const { id } = useParams();
@@ -284,8 +315,16 @@ export default function BlogDetailPage() {
                   {children}
                 </blockquote>
               ),
-              code: ({ inline, children }) => (
-                inline ? (
+              code: ({ inline, className, children }) => {
+                const match = /language-(\w+)/.exec(className || '');
+                const language = match ? match[1] : '';
+                
+                // Handle mermaid diagrams
+                if (!inline && language === 'mermaid') {
+                  return <MermaidDiagram chart={String(children).replace(/\n$/, '')} />;
+                }
+                
+                return inline ? (
                   <code className="bg-slate-200 dark:bg-slate-800 text-cyan-700 dark:text-cyan-400 px-2 py-1 rounded text-sm font-mono border border-slate-300 dark:border-slate-700">
                     {children}
                   </code>
@@ -293,8 +332,8 @@ export default function BlogDetailPage() {
                   <code className="block bg-slate-100 dark:bg-slate-900 text-cyan-700 dark:text-cyan-400 p-4 rounded-lg text-sm font-mono overflow-x-auto border border-slate-300 dark:border-slate-700 leading-relaxed">
                     {children}
                   </code>
-                )
-              ),
+                );
+              },
               pre: ({ children }) => (
                 <pre className="bg-slate-100 dark:bg-slate-900 p-4 rounded-lg overflow-x-auto mb-6 border border-slate-300 dark:border-slate-700 shadow-lg">
                   {children}
